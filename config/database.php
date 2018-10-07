@@ -51,7 +51,22 @@ return [
             'collation' => 'utf8mb4_unicode_ci',
             'prefix' => '',
             'strict' => true,
-            'engine' => null,
+            'engine' => 'InnoDB ROW_FORMAT=DYNAMIC',
+        ],
+
+        'btc' => [
+            'driver' => 'mysql',
+            'host' => env('btc_HOST', '172.29.51.28'),
+            'port' => env('btc_PORT', '3306'),
+            'database' => env('btc_DATABASE', 'forge'),
+            'username' => env('btc_USERNAME', 'forge'),
+            'password' => env('btc_PASSWORD', ''),
+            'unix_socket' => env('btc_SOCKET', ''),
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
+            'prefix' => '',
+            'strict' => true,
+            'engine' => 'InnoDB ROW_FORMAT=DYNAMIC',
         ],
 
         'pgsql' => [
